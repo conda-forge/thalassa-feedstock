@@ -12,17 +12,17 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   build:
   host:
-    - python =3.9
+    - python
     - pip
     - poetry-core >=1.0.0
     - poetry-dynamic-versioning
   run:
-    - python =3.9
+    - python >=3.9,<3.11
     - geos
     - cartopy
     - datashader
