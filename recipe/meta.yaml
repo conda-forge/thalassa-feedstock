@@ -1,5 +1,5 @@
 {% set name = "thalassa" %}
-{% set version = "0.3.0" %}
+{% set version = "0.3.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/thalassa-{{ version }}.tar.gz
-  sha256: c8c661445c11745d46b61bd8162d3b77dea7b3cbd7768c7f0eaacf7a9c9cea57
+  sha256: b568058b97a94e5ec4ba21787d1ab75df1563aec2c0912a767ab5a2de55d51a7
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
 
 requirements:
   build:
@@ -45,7 +45,7 @@ test:
 
 about:
   home: https://github.com/ec-jrc/thalassa
-  summary: 'Efficient, extendable visualizer for large unstructured meshes written in Python'
+  summary: Efficient, extendable visualizer for large unstructured meshes written in Python
   description: |
     Thalassa ia a library for visualizing unstructured mesh data.
     It builds upon geoviews and datashader and can easily handle meshes with millions of nodes interactively.
