@@ -1,5 +1,5 @@
 {% set name = "thalassa" %}
-{% set version = "0.3.0" %}
+{% set version = "0.4.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/thalassa-{{ version }}.tar.gz
-  sha256: c8c661445c11745d46b61bd8162d3b77dea7b3cbd7768c7f0eaacf7a9c9cea57
+  sha256: d91feff8f7479a885a42944c3b64ef5999c6f9582ee4ed5c43550a6f5e606203
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
 
 requirements:
   build:
@@ -22,15 +22,20 @@ requirements:
     - poetry-core >=1.0.0
     - poetry-dynamic-versioning
   run:
-    - python >=3.9,<3.11
+    - python >=3.9
     - geos
+    - bokeh >=3.0
     - cartopy
+    - dask
     - datashader
     - geopandas
     - geoviews
     - holoviews
-    - numpy <1.24
+    - ipywidgets
+    - numpy
+    - numpy-indexed
     - pandas
+    - scipy
     - shapely
     - xarray
 
@@ -40,6 +45,7 @@ test:
     - pytest
   imports:
     - thalassa.api
+    - thalassa.plotting
     - thalassa.utils
     - thalassa.normalization
 
