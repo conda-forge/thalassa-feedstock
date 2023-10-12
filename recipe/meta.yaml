@@ -30,7 +30,7 @@ requirements:
     - datashader
     - geopandas
     - geoviews
-    - holoviews
+    - holoviews >=1.15
     - ipywidgets
     - numpy
     - numpy-indexed
