@@ -12,7 +12,7 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   build:
@@ -25,19 +25,23 @@ requirements:
     - python >=3.9
     - geos
     - bokeh >=3.0
+    - bottleneck
     - cartopy
+    - cfgrib
     - dask
     - datashader
     - geopandas
     - geoviews
     - holoviews >=1.15
     - ipywidgets
+    - numbagg
     - numpy
     - numpy-indexed
     - pandas
     - scipy
     - shapely
     - xarray
+    - zarr
 
 test:
   requires:
