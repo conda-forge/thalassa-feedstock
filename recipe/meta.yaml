@@ -1,5 +1,5 @@
 {% set name = "thalassa" %}
-{% set version = "0.4.1" %}
+{% set version = "0.4.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/thalassa-{{ version }}.tar.gz
-  sha256: c2d64146e3ed86ed1b30f34b5e5e49b0dc60a53cb4bc44021c5114e2041046be
+  sha256: 73e23973396ae1235e71ea23ed1d6d6a5fe20676d311a5b6eb5bd3f6d43fe2ae
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
 
 requirements:
   build:
