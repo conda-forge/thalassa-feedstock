@@ -30,10 +30,10 @@ requirements:
     - cfgrib
     - dask
     - datashader
+    - decorator
     - geopandas
     - geoviews
     - holoviews >=1.15
-    - ipywidgets
     - numbagg
     - numpy
     - numpy-indexed
